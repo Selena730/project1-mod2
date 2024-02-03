@@ -1,0 +1,7 @@
+<h1>Companies</h1>
+
+  <% @companies.each do |company| %>
+    <h3><%= company.name %></h3>
+    <p>Market Value: <%= company.market_value %></p>
+    <p>Active: <%= company.active %></p>
+  <% end %>
