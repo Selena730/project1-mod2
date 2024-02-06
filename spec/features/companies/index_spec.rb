@@ -24,16 +24,10 @@ RSpec.describe "Companies Index Page", type: :feature do
 
   it 'includes link to Parent Index on other pages' do
     # Assuming you have a page for employees
-    visit employees_path
+    visit "/employees"
     expect(page).to have_link('All Companies', href: "/companies")
 
     # Add tests for other pages as needed
   end
-  # User Story 5, Parent Children Index
-
-  # As a visitor
-  # When I visit '/parents/:parent_id/child_table_name'
-  # Then I see each Child that is associated with that Parent with each Child's attributes
-  # (data from each column that is on the child table)
 
 end

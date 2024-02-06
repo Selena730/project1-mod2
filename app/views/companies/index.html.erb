@@ -6,3 +6,5 @@
   <p>Active: <%= company.active %></p>
   <p>Created At: <%= company.created_at.strftime("%B %d, %Y") %></p>
 <% end %>
+
+<%= link_to 'New Company', new_company_path %>
