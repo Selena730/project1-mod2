@@ -1,7 +1,13 @@
 <h1>Employees</h1>
 
-  <% @employees.each do |employee| %>
-    <h3><%= employee.name %></h3>
-    <p>Salary: <%= employee.salary %></p>
-    <p>Full Time: <%= employee.full_time %></p>
-  <% end %>
+<% if @company %>
+<h1><%= @company.name %> Employees</h1>
+<% else %>
+<h1>All Employees</h1>
+<% end %>
+
+<% @employees.each do |employee| %>
+<h3><%= employee.name %></h3>
+<p>Salary: <%= employee.salary %></p>
+<p>Full Time: <%= employee.full_time %></p>
+<% end %>

@@ -1,4 +1,5 @@
 class Company < ApplicationRecord
+  has_many :employees
 end
 # # ###
 # # # Path: app/models/company.rb
