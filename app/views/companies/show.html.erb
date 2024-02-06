@@ -1,4 +1,7 @@
 <h1>Company Details</h1>
+
+<%= link_to 'View Employees', "/company_employees"(@company) %>
+
 <p>Name: <%= @company.name %></p>
 <p>Market Value: <%= @company.market_value %></p>
 <p>Active: <%= @company.active %></p>

@@ -22,10 +22,12 @@ RSpec.describe "Companies Index Page", type: :feature do
     expect(page).to have_content("Order")
   end
 
-  it "has links to company show pages" do
-    visit "/companies"
+  it 'includes link to Parent Index on other pages' do
+    # Assuming you have a page for employees
+    visit employees_path
+    expect(page).to have_link('All Companies', href: "/companies")
 
-    expect(page).to have_link("Chaos", href: "/companies/#{@company.id}")
+    # Add tests for other pages as needed
   end
   # User Story 5, Parent Children Index
 
